@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ND Western | Careers</title>
+
+    <!-- Remixicon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <style>
+      /* Smooth transitions */
+      .fly-in {
+        animation: flyIn 1s forwards;
+      }
+
+      @keyframes flyIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url("assets/images/hero-bg.jpg") center/cover no-repeat;
+        padding: 1rem;
+      }
+
+      /* Floating Job Card */
+      .job-card {
+        background: #fff;
+        color: #222;
+        width: 100%;
+        max-width: 600px; /* adjusted size */
+        max-height: 85vh; /* avoid scrolling */
+        padding: 1.5rem;
+        border-radius: 14px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        overflow-y: auto;
+      }
+
+      .job-card h1 {
+        margin: 0 0 1rem 0;
+        font-size: 1.8rem;
+        color: #ed1d24;
+        text-align: center;
+      }
+
+      .job-card h4 {
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+        color: #ed1d24;
+        font-size: 1.05rem;
+      }
+
+      .job-card p,
+      .job-card ul,
+      .job-card li {
+        color: #333;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      /* FIXED Bullet Styling */
+      .job-card ul {
+        margin-left: 1.5rem;
+        padding-left: 1rem;
+        list-style-type: disc; /* ensure bullets are visible */
+      }
+
+      .job-card li {
+        margin-bottom: 0.4rem;
+      }
+
+      .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.85rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #ed1d24;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #b80314;
+      }
+    </style>
+  </head>
+  <body>
+      <!-- HEADER -->
+   <header class="main">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="index.html">
+              <img src="assets/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-3-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li> <a href="index.html">Home</a> </li>
+         
+        </ul>
+      </nav>
+ <!-- HERO / LANDING HEADER -->
+      <div class="header__container" id="hero-content">
+      <!-- HERO with job card floating in center -->
+      <section class="hero">
+        <div class="job-card fly-in">
+          <h1>General Operator</h1>
+
+          <div class="job-meta">
+            <span><i class="ri-map-pin-line"></i> Lagos</span>
+            <span><i class="ri-calendar-line"></i> Sept 1, 2025</span>
+            <span><i class="ri-briefcase-line"></i> Full-Time</span>
+          </div>
+
+          <p>
+            We are seeking <b>motivated and detail-oriented General Operators</b>
+            to join our production team and support daily operations while
+            maintaining <b>efficiency, quality, and safety standards</b>.
+          </p>
+
+          <h4>Your Role:</h4>
+          <ul>
+            <li>Operate and monitor production machinery.</li>
+            <li>Ensure products meet quality standards.</li>
+            <li>Maintain a safe and clean work environment.</li>
+            <li>Work with supervisors to meet production targets.</li>
+          </ul>
+
+          <h4>Requirements:</h4>
+          <ul>
+            <li>Minimum 3 years of relevant experience.</li>
+            <li>Strong attention to detail and problem-solving skills.</li>
+            <li>Ability to work shifts in a fast-paced environment.</li>
+            <li>Diploma or Bachelor’s Degree preferred.</li>
+          </ul>
+
+          <h4>What We Offer:</h4>
+          <ul>
+            <li>Competitive pay and benefits.</li>
+            <li>Career growth opportunities.</li>
+            <li>Inclusive and supportive workplace culture.</li>
+          </ul>
+
+          <div class="mt-4" style="text-align: center; margin-top: 1rem;">
+            <a href="https://forms.office.com/pages/responsepage.aspx?id=KNIPaPaprkOJfJtp7FYyxCF0uvVkaJtNlI7Y2CvsYQFUQ1dZMTA0MEkxNk8yRkhWTFg1OExMQkE3Qi4u&origin=lprLink&route=shorturl" 
+               class="btn" target="_blank" rel="noopener noreferrer">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Scripts -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+<script>
+const viewBtn = document.getElementById("view-openings");
+      const heroContent = document.getElementById("hero-content");
+      const openingsCards = document.getElementById("openings-cards");
+
+      // Animate hero on page load
+      window.addEventListener("DOMContentLoaded", () => {
+        heroContent.style.display = "block";
+        heroContent.classList.add("fly-in");
+      });
+
+      // Handle hero -> openings transition
+      viewBtn.addEventListener("click", () => {
+        heroContent.classList.remove("fly-in"); // reset in case it's there
+        heroContent.classList.add("fly-out");
+
+        setTimeout(() => {
+          heroContent.style.display = "none";
+          openingsCards.style.display = "flex";
+          openingsCards.classList.add("fly-in");
+        }, 1000); // Wait for fly-out to finish
+      });
+
+     
+    </script>
+    <!-- Scripts -->
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".job-card").classList.add("fly-in");
+      });
+    </script>
+  </body>
+</html>
